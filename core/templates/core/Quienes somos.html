@@ -2,28 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  {% load static %} 
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Inicio</title>
-  <link rel="stylesheet" href="../css/style2.css">
+  <link rel="stylesheet" href="{% static 'core/css/style2.css' %}">
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDO2wIp1Djj9W8cur7od8bHV9VzELD4tFA&callback=initMap" async defer></script>
-  <script src="../js/java.js"></script>
+  <script src="{% static 'core/js/java.js' %}"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
   <header>
     <input type="checkbox" id="btn-menu">
-    <label for="btn-menu"><img src="../img/menu.png" alt=""></label>
+    <label for="btn-menu"><img src="{% static 'core/img/menu.png' %}" alt=""></label>
     <nav class="menu">
         <ul>
-            <iMG src="../img/Pawpet.png" class="pawpet2">
-            <li><a href="inicio.html">Inicio</a></li>
+            <iMG src="{% static 'core/img/Pawpet.png' %}" class="pawpet2">
+            <li><a href="{% url 'home' %}">Inicio</a></li>
             <li style="background-color: rgba(0,0,0,0.3);"><a>Quienes somos</a></li>
-            <li><a href="GaleriadeFotos.html">Galeria de fotos</a></li>
-            <li><a href="Donar.html">Donar</a></li>
-            <li><a href="Registro.html">Registro</a></li>
+            <li><a href="Galeria">Galeria de fotos</a></li>
+            <li><a href="form-donar">Donar</a></li>
+            <li><a href="form-registro">Registro</a></li>
         </ul>
-        <div><iMG src="../img/Pawpet.png" class="pawpet"></div>
+        <div><iMG src="{% static 'core/img/Pawpet.png' %}" class="pawpet"></div>
     </nav>
 </header>
     <div class="container-fluid">
@@ -78,8 +79,8 @@
                         <br>
                       <div> 
                         <div class="row justify-content-center">
-                             <div class="img" style="background-color: rgb(255, 255, 255); box-shadow: 0px 0px 5px 1px black; padding: 5px; margin-top: 10px;"><img src="../img/perrito.jpg" style="display:block ; max-width:100% ;width: 100%;"></div>
-                             <div class="img" style="background-color: rgb(255, 255, 255); box-shadow: 0px 0px 5px 1px black; padding: 5px; margin-top: 10px; margin-left: 10px;"><img src="../img/perrito2.jpg" style="display:block ; max-width:100% ;width: 100%;"></div>
+                             <div class="img" style="background-color: rgb(255, 255, 255); box-shadow: 0px 0px 5px 1px black; padding: 5px; margin-top: 10px;"><img src="{% static 'core/img/perrito.jpg' %}" style="display:block ; max-width:100% ;width: 100%;"></div>
+                             <div class="img" style="background-color: rgb(255, 255, 255); box-shadow: 0px 0px 5px 1px black; padding: 5px; margin-top: 10px; margin-left: 10px;"><img src="{% static 'core/img/perrito2.jpg' %}" style="display:block ; max-width:100% ;width: 100%;"></div>
                           <div class="col-sm-8" style=" font-size: 20px; text-align: justify; padding: 10px;">
                     </div>
                     <br>
@@ -99,9 +100,9 @@
       <p>Angelo Gonzales, Alonso Leiva, Kevin Godoy, Ignacio Sepulveda ©Copyrigth Derechos reservados.</p>
     </div>
     <div>
-      <a href="Insertar direccion de enlace"><img src="../img/Facebook.png" width="40px"></a>
-      <a href="Insertar direccion de enlace"><img src="../img/twitter.png" width="40px"></a>
-      <a href="Insertar direccion de enlace"><img src="../img/intagram.png" width="40px"></a>
+      <a href="Insertar direccion de enlace"><img src="{% static 'core/img/Facebook.png' %}" width="40px"></a>
+        <a href="Insertar direccion de enlace"><img src="{% static 'core/img/Twitter.png' %}" width="40px"></a>
+        <a href="Insertar direccion de enlace"><img src="{% static 'core/img/Instagram.png' %}" width="40px"></a>
     </div>
   </div>  
 </footer>

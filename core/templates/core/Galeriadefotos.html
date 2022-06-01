@@ -2,28 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  {% load static %} 
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/style2.css">
-  <link rel="stylesheet" href="../css/estilo.css">
+  <link rel="stylesheet" href="{% static 'core/css/style2.css' %}">
+  <link rel="stylesheet" href="{% static 'core/css/estilo.css' %}">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <title>Galeria de fotos</title>
 </head>
 <body>
-  <script src="../js/datos.js"></script>
+  <script src="{% static 'core/js/datos.js' %}"></script>
   <header>
     <input type="checkbox" id="btn-menu">
-    <label for="btn-menu"><img src="../img/menu.png" alt=""></label>
+    <label for="btn-menu"><img src="{% static 'core/img/menu.png' %}" alt=""></label>
     <nav class="menu">
         <ul>
-            <iMG src="../img/Pawpet.png" class="pawpet2">
-            <li><a href="Inicio.html">Inicio</a></li>
-            <li><a href="Quienes somos.html">Quienes somos</a></li>
-            <li style="background-color: rgba(0,0,0,0.3);"><a >Galeria de fotos</a></li>
-            <li><a href="Donar.html">Donar</a></li>
-            <li><a href="Registro.html">Registro</a></li>
+            <iMG src="{% static 'core/img/Pawpet.png' %}" class="pawpet2">
+            <li><a href="{% url 'home' %}">Inicio</a></li>
+            <li><a href="QuienesSomos">Quienes somos</a></li>
+            <li style="background-color: rgba(0,0,0,0.3);"><a>Galeria de fotos</a></li>
+            <li><a href="form-donar">Donar</a></li>
+            <li><a href="form-registro">Registro</a></li>
         </ul>
-        <div><iMG src="../img/Pawpet.png" class="pawpet"></div>
+        <div><iMG src="{% static 'core/img/Pawpet.png' %}" class="pawpet"></div>
     </nav>
 </header>
 <div class="container-fluid"> 
@@ -38,7 +39,7 @@
   </div>
       <div class="galeria">
         <div class="foto">
-          <img src="../img/akatsuki.jpg" id=imagen alt="disfraz">
+          <img src="{% static 'core/img/akatsuki.jpg' %}" id=imagen alt="disfraz">
         </div>
       <div class="pie">
         <p id="titulo">Disfraz Akatsuki Perro</p>
@@ -58,7 +59,7 @@
   <!--SEGUNDA FOTO-->
   <div class="galeria">
     <div class="foto">
-        <img src="../img/arena_gato.jpg" id="imagen2" alt="Arena de gato">
+        <img src="{% static 'core/img/arena_gato.jpg' %}" id="imagen2" alt="Arena de gato">
       </a>
     </div>
     <div class="pie">
@@ -80,7 +81,7 @@
     <!--TERCERA FOTO-->
   <div class="galeria">
     <div class="foto">
-      <img src="../img/collar_perro.jpg" id=imagen3 alt="collar">
+      <img src="{% static 'core/img/collar_perro.jpg' %}" id=imagen3 alt="collar">
     </div>
   <div class="pie">
     <p id="titulo3">Collar para perro adulto ajustable</p>
@@ -104,7 +105,7 @@
   <!--CUARTA FOTO-->
   <div class="galeria">
     <div class="foto">
-      <img src="../img/rascador.jpg" id=imagen4 alt="rascador">
+      <img src="{% static 'core/img/rascador.jpg' %}" id=imagen4 alt="rascador">
     </div>
   <div class="pie">
     <p id="titulo4">Rascador grande para gato</p>
@@ -127,7 +128,7 @@
   <!--QUINTA FOTO-->
   <div class="galeria">
     <div class="foto">
-      <img src="../img/galleta_doo.jpg" id=imagen5 alt="scooby galletas">
+      <img src="{% static 'core/img/galleta_doo.jpg' %}" id=imagen5 alt="scooby galletas">
     </div>
   <div class="pie">
     <p id="titulo5">Scooby galletas</p>
@@ -151,7 +152,7 @@
   <!--SEXTA FOTO-->
   <div class="galeria">
     <div class="foto">
-      <img src="../img/michi_cat.jpg" id=imagen6 alt="comida de gato">
+      <img src="{% static 'core/img/michi_cat.jpg' %}" id=imagen6 alt="comida de gato">
     </div>
   <div class="pie">
     <p id="titulo6">Alimento para gato</p>
@@ -174,7 +175,7 @@
   <!--SEPTIMA FOTO-->
   <div class="galeria">
     <div class="foto">
-      <img src="../img/erizo_comida.jpg" id=imagen7 alt="comida de erizo">
+      <img src="{% static 'core/img/erizo_comida.jpg' %}" id=imagen7 alt="comida de erizo">
     </div>
   <div class="pie">
     <p id="titulo7">Comida para erizo</p>
@@ -198,7 +199,7 @@
   <!--OCTAVA FOTO-->
   <div class="galeria">
     <div class="foto">
-      <img src="../img/pecera.png" id=imagen8 alt="pecera">
+      <img src="{% static 'core/img/pecera.png' %}" id=imagen8 alt="pecera">
     </div>
   <div class="pie">
     <p id="titulo8">Pecera de tortuga</p>
@@ -222,7 +223,7 @@
   <!--NOVENA FOTO-->
   <div class="galeria">
     <div class="foto">
-      <img src="../img/huron.png" id=imagen9 alt="huron">
+      <img src="{% static 'core/img/huron.png' %}" id=imagen9 alt="huron">
     </div>
   <div class="pie">
     <p id="titulo9">Tunel para hurón</p>
@@ -255,9 +256,9 @@
   </div>
   <div>
     
-    <a href="Insertar direccion de enlace"><img src="../img/Facebook.png" width="40px"></a>
-    <a href="Insertar direccion de enlace"><img src="../img/twitter.png" width="40px"></a>
-    <a href="Insertar direccion de enlace"><img src="../img/intagram.png" width="40px"></a>
+    <a href="Insertar direccion de enlace"><img src="{% static 'core/img/Facebook.png' %}" width="40px"></a>
+    <a href="Insertar direccion de enlace"><img src="{% static 'core/img/Twitter.png' %}" width="40px"></a>
+    <a href="Insertar direccion de enlace"><img src="{% static 'core/img/Instagram.png' %}" width="40px"></a>
     
   </div>
 

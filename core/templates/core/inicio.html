@@ -2,29 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    {% load static %} 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
-    <link rel="stylesheet" href="../css/style2.css">
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDO2wIp1Djj9W8cur7od8bHV9VzELD4tFA&callback=initMap" async defer></script>
-    <script src="../js/java.js"></script>
+    <link rel="stylesheet" href="{% static 'core/css/style2.css' %}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
+    <script src="{% static 'core/js/java.js' %}"></script>
   </head>
 <body>
     <header>
         <input type="checkbox" id="btn-menu">
-        <label for="btn-menu"><img src="../img/menu.png" alt=""></label>
+        <label for="btn-menu"><img src="{% static 'core/img/menu.png' %}" alt=""></label>
         <nav class="menu">
             <ul>
-                <iMG src="../img/Pawpet.png" class="pawpet2">
+                <iMG src="{% static 'core/img/Pawpet.png' %}" class="pawpet2">
                 <li style="background-color: rgba(0,0,0,0.3);"><a>Inicio</a></li>
-                <li><a href="Quienes somos.html">Quienes somos</a></li>
-                <li><a href="GaleriadeFotos.html">Galeria de fotos</a></li>
-                <li><a href="Donar.html">Donar</a></li>
-                <li><a href="Registro.html">Registro</a></li>
+                <li><a href="QuienesSomos">Quienes somos</a></li>
+                <li><a href="Galeria">Galeria de fotos</a></li>
+                <li><a href="form-donar">Donar</a></li>
+                <li><a href="form-registro">Registro</a></li>
             </ul>
-            <div><iMG src="../img/Pawpet.png" class="pawpet"></div>
+            <div><iMG src="{% static 'core/img/Pawpet.png' %}" class="pawpet"></div>
         </nav>
     </header>
     <div class="container-fluid"> 
@@ -38,19 +37,19 @@
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img onmouseover="MostrarTexto()" onmouseout="OcultarTexto()" src="../img/accesorios.jpg"alt="...">
+                <img onmouseover="MostrarTexto()" onmouseout="OcultarTexto()" src="{% static 'core/img/accesorios.jpg' %}"alt="...">
                 <div class="carousel-caption d-none d-md-block" >
                   <h3 id="texto">Todos los accesorios que busques en un solo lugar</h3>
                 </div>
               </div>
               <div class="carousel-item">
-                <img onmouseover="MostrarTexto()" onmouseout="OcultarTexto()" src="../img/accesorios-gatos-800x375.jpg"alt="...">
+                <img onmouseover="MostrarTexto()" onmouseout="OcultarTexto()" src="{% static 'core/img/accesorios-gatos-800x375.jpg' %}"alt="...">
                 <div class="carousel-caption d-none d-md-block">
                   <h3 id="texto2">¡Haz que tu felino se sienta a gusto!</h3>
                 </div>
               </div>
               <div class="carousel-item">
-                <a href="Galeriadefotos.html"><img onmouseover="MostrarTexto()" onmouseout="OcultarTexto()" src="../img/Galeria de fotos.jpg"alt="..."></a>
+                <a href="Galeria"><img onmouseover="MostrarTexto()" onmouseout="OcultarTexto()" src="{% static 'core/img/Galeria de fotos.jpg' %}"alt="..."></a>
                 <div class="carousel-caption d-none d-md-block">
                   <h3 id="texto3">¡Observa todo nuestro catalogo!</h3>
                 </div>
@@ -96,9 +95,9 @@
       </div>
       <div>
         
-        <a href="Insertar direccion de enlace"><img src="../img/Facebook.png" width="40px"></a>
-        <a href="Insertar direccion de enlace"><img src="../img/twitter.png" width="40px"></a>
-        <a href="Insertar direccion de enlace"><img src="../img/intagram.png" width="40px"></a>
+        <a href="Insertar direccion de enlace"><img src="{% static 'core/img/Facebook.png' %}" width="40px"></a>
+        <a href="Insertar direccion de enlace"><img src="{% static 'core/img/Twitter.png' %}" width="40px"></a>
+        <a href="Insertar direccion de enlace"><img src="{% static 'core/img/Instagram.png' %}" width="40px"></a>
         
       </div>
   

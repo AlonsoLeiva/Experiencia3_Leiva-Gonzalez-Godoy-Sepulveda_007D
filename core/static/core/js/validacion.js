@@ -10,6 +10,10 @@
 		// -- ELIMINAR HASTA ACA --
 		  
 		$().ready(function() {
+			$.validator.addMethod("formrut", function (value, element) {
+                var patron = resultado(value)
+                return this.optional(element) || patron;
+             }, "Formato del rut incorrecto");
 			// validate the comment form when it is submitted
 			$("#registration").validate({
 				rules: {
@@ -22,7 +26,8 @@
 						minlength: 8
 					},
 					rut: {
-						required: true
+						required: true,
+						formrut: true
 					},
 					email: {
 						required: true,
@@ -64,7 +69,8 @@
 						email: "Email ingresado no es válido"
 					},
 					rut: {
-						required: ""
+						required: "Debe ingresar su rut",
+						formrut: "Rut ingresado no válido"
 					},
 					contraseña: {
 						required: "Debes una contraseña",
@@ -146,21 +152,12 @@
 		let validador = new RutValidador('30.686.957-4')
 		console.log(validador.formato())
 		
-		function resultado() {
-			let rut = $("#rut").val();
-			let rutValidador = new RutValidador(rut)
-			var visible="block"
+		function resultado(value) {
+			let rutValidador = new RutValidador(value)
 			if(rutValidador.esValido) {
-				visible="none"
+				return true
 			}
-			$('#resultado').html(mostrarMensaje('Rut Invalido'));
-			document.getElementById("resultado").style.display=visible;
-		}
-		
-		function mostrarMensaje(mensaje) {
-			return `
-					<p style="color:red;">${mensaje}</p>
-				`;
+			return false
 		}
 
 
