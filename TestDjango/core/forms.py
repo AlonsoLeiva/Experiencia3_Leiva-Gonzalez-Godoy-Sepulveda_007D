@@ -1,6 +1,6 @@
 from django import forms
 from django.forms import ModelForm
-from .models import Vehiculo,Registro
+from .models import Vehiculo,Personas
 
 # creamos nuestra clase para el formulario desde la base de datos
 class VehiculoForm(ModelForm):
@@ -13,6 +13,6 @@ class VehiculoForm(ModelForm):
 class RegistroForm(ModelForm):
 
     class Meta:
-        model= Registro
-        fields=['nombre','apellido','rut','email','contraseña','conficontraseña','genero','civil','region','direccion']
+        model= Personas
+        fields=['nombre','apellido','rut','email','contraseña','conficontraseña','genero','estadocivil','region','direccion']
 
