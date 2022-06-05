@@ -37,7 +37,13 @@
             <div style="background-color: rgb(255, 255, 255); box-shadow: 0px 0px 5px 1px black; padding: 30px;">
                 <form method="POST" action="/Consultar-registro/">
                     {% csrf_token %}
+                    <h1>Consultar Registros</h1>
+                    <br>
+                    <label>Rut del usuario</label>
                     <input type = "text" class = "form-control" name = "rut" id="rut" placeholder = "Ingrese el rut a buscar"/>
+                    <br>
+                    <label>Contraseña del usuario</label>
+                    <input type = "password" class = "form-control" name = "contraseña" id="contraseña" placeholder = "Ingrese la contraseña del usuario"/>
                     <br>
                     <div ALIGN="center">
                     <button id="btn-validar" type = "submit" class = "btn btn-primary" >Buscar</button>

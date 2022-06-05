@@ -21,10 +21,10 @@
             <ul>
                 <iMG src="{% static 'core/img/Pawpet.png' %}" class="pawpet2">
                 <li><a href="{% url 'home' %}">Inicio</a></li>
-                <li><a href="QuienesSomos">Quienes somos</a></li>
-                <li><a href="Galeria">Galeria de fotos</a></li>
-                <li><a href="form-donar">Donar</a></li>
-                <li style="background-color: rgba(0,0,0,0.3);"><a>Registro</a></li>
+                <li><a href="{% url 'QuienesSomos' %}">Quienes somos</a></li>
+                <li><a href="{% url 'Galeria' %}">Galeria de fotos</a></li>
+                <li><a href="{% url 'form-donar' %}">Donar</a></li>
+                <li><a href="{% url 'form-registro' %}">Registro</a></li>
             </ul>
             <div><iMG src="{% static 'core/img/Pawpet.png' %}" class="pawpet"></div>
         </nav>
@@ -102,6 +102,7 @@
                 <br/>
                 <button id="btn-validar" type = "submit" class = "btn btn-primary" >Modificar</button>
                 <button type = "reset" class = "btn btn-primary" >Limpiar</button>
+                <a class="btn btn-primary" href="{% url 'Consultar_datos' %}">Cancelar</a>
                 </form>
             </div>
         </div>
