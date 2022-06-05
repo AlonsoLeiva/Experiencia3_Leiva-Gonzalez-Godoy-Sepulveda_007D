@@ -36,7 +36,8 @@
         <div class="col-sm-7" >
             <div style="background-color: rgb(255, 255, 255); box-shadow: 0px 0px 5px 1px black; padding: 30px;">
             
-            <form method="post" action="" id = "registration">
+            <form method="post" action="/registrarPersona/" id = "registration">
+                {% csrf_token %}
                 <h1>Formulario de Registro</h1>
                 <label>Nombres</label>
                 <input type = "text" class = "form-control" name = "nombres" id="nombres" placeholder = "Ingrese sus Nombres"/>
@@ -58,23 +59,23 @@
                 <br/>
                 <label>Género</label>
                     <div>
-						<label class="radio-inline"><input type="radio" name="genero"  id="hombre" class = "form-contorl"/>Hombre</label>
-						<br/>
-                        <label class="radio-inline"><input type="radio"  name="genero" id="mujer" class = "form-contorl"/>Mujer</label> 
-                        <br/>
-                        <label class="radio-inline"><input type="radio"  name="genero" id="otro" class = "form-contorl"/>Otro</label>         
-                        <br/>
-                        <label for="genero" class="error" style="display:none;"></label>
+						<select class = "form-control" name = "genero" id="genero">
+                            <option value="" selected="" disabled="">--Seleccione Género--</option>
+                            <option>Masculino</option>
+                            <option>Femenino</option>
+                            <option>Otro</option>
+                        </select>
                     </div>
                 <br/>
                 <label>Estado Civil</label>
                     <div>
-                    	<input type="checkbox" class="radio" id="1" name = "estadocivil" onclick="getSelectItemThat(this.id)">Casado/a</label>
-						<input type="checkbox" class="radio" id="2" name = "estadocivil" onclick="getSelectItemThat(this.id)">Soltero/a</label>
-						<input type="checkbox" class="radio" id="3" name = "estadocivil" onclick="getSelectItemThat(this.id)">Viudo/a</label>
-                    	<input type="checkbox" class="radio" id="4" name = "estadocivil" onclick="getSelectItemThat(this.id)">Divorciado/a</label>
-                        <br/>
-                        <label for="estadocivil" class="error" style="display:none;"></label>
+                    	<select class = "form-control" name = "estadocivil" id="estadocivil">
+                            <option value="" selected="" disabled="">--Seleccione Estado Civil--</option>
+                            <option>Casado/a</option>
+                            <option>Soltero/a</option>
+                            <option>Viudo/a</option>
+                            <option>Divorciado/a</option>
+                        </select>
                     </div>
                 <br/>
                 <label>Region</label>
@@ -103,6 +104,8 @@
                 <br/>
                 <button id="btn-validar" type = "submit" class = "btn btn-primary" >Registrarse</button>
                 <button type = "reset" class = "btn btn-primary" >Limpiar</button>
+                <br>
+                <a href="Consultar-datos">Consultar Registros</a>
                 </form>
                 </div>
             </div>

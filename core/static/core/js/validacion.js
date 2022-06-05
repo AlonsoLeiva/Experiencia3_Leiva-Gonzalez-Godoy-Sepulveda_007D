@@ -2,11 +2,7 @@
 		//Este mensaje de alerta es unicamente a modo de prueba para prevenir que se envie el formulario
 		//Una vez configuradas las reglas de validacion y los mensajes se puede eliminar
 		// -- ELIMINAR DESDE ACA --
-		$.validator.setDefaults( {
-			submitHandler: function () {
-			   alert( "Registro Completo!" );
-			}
-		 });
+		
 		// -- ELIMINAR HASTA ACA --
 		  
 		$().ready(function() {
@@ -53,7 +49,11 @@
 					dirección: {
 						required: true,
 						minlength: 15
-					}
+					},
+					txtNombre:{
+						requred: true,
+						minlength: 2
+					},
 				},
 				messages: {
 					nombres: {
@@ -67,6 +67,10 @@
 					email: {
 						required: "Debes ingresar un email válido",
 						email: "Email ingresado no es válido"
+					},
+					txtNombre: {
+						required: "Debes ingresar un nombre válido",
+						minlength: "El nombre debe ser mayor a 2 caracteres"
 					},
 					rut: {
 						required: "Debe ingresar su rut",
@@ -159,6 +163,7 @@
 			}
 			return false
 		}
+
 
 
 

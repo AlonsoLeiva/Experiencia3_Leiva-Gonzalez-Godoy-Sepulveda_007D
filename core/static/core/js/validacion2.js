@@ -1,9 +1,3 @@
-		$.validator.setDefaults({
-			submitHandler: function() {
-				alert("Donación Enviada!");
-			}
-		});
-
 		$().ready(function() {
 
 			$.validator.addMethod("formtarjeta", function (value, element) {
@@ -39,7 +33,13 @@
 					},
 					aceptar: {
 						required: true
-					}
+					},
+
+					monto: {
+						required: true,
+						minlength:4,
+						maxlength:7		
+					},
 				},
 				messages: {
 					nombre: {
@@ -67,6 +67,13 @@
 					},
 					aceptar: {
 						required: "Debes aceptar la politica no reembolsable"
+						
+					},
+
+					monto: {
+						required: "Debes ingresar un monto para donar",
+						minlength: "Ingrese un minimo de 1.000",
+						maxlength: "No puede donar mas de 1.000.000"
 					}
 				}
 
