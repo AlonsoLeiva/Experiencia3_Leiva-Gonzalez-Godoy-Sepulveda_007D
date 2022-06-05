@@ -1,13 +1,9 @@
 from django.urls import path
-from .views import consultar_datos, home,Test,form_vehiculo,form_mod_vehiculo,form_del_vehiculo,donar,Galeriafotos,registro,Quienes_Somos,registrar_persona,form_mod_registro,editar_registro,consultar_registro,consultar_datos,registro_completo
+from .views import consultar_datos, home,donar,Galeriafotos,registro,Quienes_Somos,registrar_persona,form_mod_registro,editar_registro,consultar_registro,consultar_datos,registro_completo
 
 
 urlpatterns = [
     path ('', home,name="home"), 
-    path ('test', Test,name="Test"),
-    path ('form-vehiculo', form_vehiculo,name="form_vehiculo"),
-    path ('form-mod-vehiculo/<id>', form_mod_vehiculo,name="form_mod_vehiculo"),
-    path ('form-del-vehiculo/<id>', form_del_vehiculo,name="form_del_vehiculo"),
     path ('QuienesSomos', Quienes_Somos,name="QuienesSomos"),
     path ('form-registro', registro,name="form-registro"),
     path ('form-donar', donar,name="form-donar"),
