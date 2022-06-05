@@ -3,7 +3,6 @@ from django.db import models
 # Create your models here.
 
 
-#modelo categoria
 
 
 class Personas(models.Model):

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Personas,Donaciones
+from .models import Donaciones, Personas
 
 # Register your models here.
 # Permite administrar el modelo completo

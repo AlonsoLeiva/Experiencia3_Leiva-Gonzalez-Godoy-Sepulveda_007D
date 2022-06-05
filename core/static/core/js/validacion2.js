@@ -1,9 +1,3 @@
-		$.validator.setDefaults({
-			submitHandler: function() {
-				alert("Donación Enviada!");
-			}
-		});
-
 		$().ready(function() {
 
 			$.validator.addMethod("formtarjeta", function (value, element) {
@@ -32,18 +26,25 @@
 					fecha: {
 						required: true
 					},
+					monto: {
+						required: true,
+						number: true,
+						minlength:4
+					},
 					cvv: {
 						required: true,
 						minlength:3,
 						maxlength:3
 					},
-					monto_donar: {
-						required: true,
-						minlength:4
-					},
 					aceptar: {
 						required: true
-					}
+					},
+
+					monto: {
+						required: true,
+						minlength:4,
+						maxlength:7		
+					},
 				},
 				messages: {
 					nombre: {
@@ -61,6 +62,11 @@
 						required: "Debes ingresar el numero de tu tarjeta valido",
 						minlength: "Faltan digitos de su tarjeta"
 					},
+					monto: {
+						number: "El monto debe ser númerico",
+						required: "Debes ingresar un monto a donar",
+						minlength: "El minimo de donativos es de $1000 pesos"
+					},
 					fecha: {
 						required: "Debes ingresar la fecha de expiracion"
 					},
@@ -69,12 +75,9 @@
 						minlength: "Faltan digitos de su CVV",
 						maxlength: "Sobrepasaste la cantidad de digitos de tu CVV"
 					},
-					monto_donar: {
-						required: "Debes de ingresar el monto a donar",
-						minlength: "El minimo de donativos es de $1000 Pesos"
-					},
 					aceptar: {
 						required: "Debes aceptar la politica no reembolsable"
+						
 					}
 				}
 
