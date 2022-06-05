@@ -1,0 +1,44 @@
+{% load static %} 
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    
+    {% load static %} 
+    
+    
+    
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" type="text/css" href="{% static 'core/css/style.css' %}" />
+    <script src='main.js'></script>
+
+    
+</head>
+<body>
+    tu no mete cabra saramambiche
+    heeeeey
+    <h1>hey</h1>
+    <h2>hey</h2>
+    <h3>hey h3</h3>
+    <h4 class="clase">hey</h4>
+    <h5>hey</h5>
+    <h1>LETS FUCKING GOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO    
+    <a href="test">Home</a>
+    <a href="form-vehiculo">Formulario</a>
+
+
+    <table border="1">
+    <tr><td>Patente</td><td>Marca</td><td>Modelo</td></tr>
+    {% for ve in Vehiculos %}
+    <tr><td>{{ve.patente}}</td><td>{{ve.marca}}</td><td>{{ve.modelo}}</td></tr>
+    {% endfor %}
+    </table>
+    <div class="row">
+        <img src="{% static 'core/img/shrek.jpg' %}">
+        <img src="{% static 'core/img/sien.jpg' %}">
+        <img src="{% static 'core/img/si.png' %}">
+    </div>                                                                                                                                       </h1>
+</body>
+</html>
