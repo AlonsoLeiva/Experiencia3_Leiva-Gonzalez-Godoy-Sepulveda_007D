@@ -34,7 +34,8 @@
     <div class="row justify-content-center">
     	<div class = "col-sm-7">
             <div style="background-color: rgb(255, 255, 255); box-shadow: 0px 0px 5px 1px black; padding: 30px;">
-               	<form id = "formulario-donar">         
+               	<form method="POST" action="/registrar_donante/" id="formulario-donar">  
+                       {% csrf_token %}       
                     <div>
                         <h1>Donativos a PawPet<h1></h1>
                     </div>
@@ -61,18 +62,25 @@
                         <label for="">CVV:</label>
                         <input type = "number" class = "form-control" name = "cvv" placeholder = "Los 3 numeros tras su tarjeta" id = "cvv"/>
                         <br/>
+                        <label for="">Monto:</label>
+                        <input type = "number" class = "form-control" name = "monto" placeholder = "Ingrese un monto a donar" id = "monto"/>
+                        <br/>
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" value="" name="aceptar" id="aceptar">Aceptar politica de no reembolsos </input>
                         </div>
                         <label for="aceptar" class="error" style="display: none;"></label>
                         <br/>
                         <label for="">Comentario:</label>
-                        <textarea class = "form-control" name = "address" placeholder="Escriba el comentario"></textarea>
+                        <textarea class = "form-control" name = "comentario" placeholder="Escriba el comentario" id="comentario"></textarea>
                         <br/>
                         <button type = "submit" class = "btn btn-primary" id="btn-donar">Donar</button>
                         <button type = "reset" class = "btn btn-primary" >Limpiar</button>
+                        <br>
+                        <br>
+                        <a href="{% url 'Consultar_datos_donar' %}">Consultar Donaciones</a>
                     </form>
                     </div>
+                        
                 </div>
             </div>
         </div>
