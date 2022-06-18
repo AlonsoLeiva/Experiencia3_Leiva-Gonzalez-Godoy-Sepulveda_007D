@@ -1,9 +1,10 @@
 function mostrar(){
     document.getElementById('comprar').style.visibility='hidden';
-    document.getElementById('imagen').style.display='none'
+    document.getElementById('imagen').style.display='none';
     document.getElementById('datos').style.display= 'block';
     document.getElementById('boton').style.visibility='hidden';
     document.getElementById('titulo').style.display='none';
+  
   }
   
   function ocultar(){
@@ -23,11 +24,12 @@ function mostrar(){
     }
     
     function ocultar2(){
-      document.getElementById('comprar2').style.visibility='visible';
+    
       document.getElementById('datos2').style.display ='none';
       document.getElementById('imagen2').style.display = 'block';
       document.getElementById('boton3').style.visibility='visible';
       document.getElementById('titulo2').style.display='block';
+      document.getElementById('comprar2').style.visibility='visible';
     }
   
     function mostrar3(){
@@ -40,11 +42,11 @@ function mostrar(){
     }
     
     function ocultar3(){
-      document.getElementById('comprar3').style.visibility='visible';
       document.getElementById('datos3').style.display ='none';
       document.getElementById('imagen3').style.display = 'block';
       document.getElementById('boton5').style.visibility='visible';
       document.getElementById('titulo3').style.display='block';
+      document.getElementById('comprar3').style.visibility='visible';
     }
   
     function mostrar4(){
@@ -57,11 +59,11 @@ function mostrar(){
     }
     
     function ocultar4(){
-      document.getElementById('comprar4').style.visibility='visible';
       document.getElementById('datos4').style.display ='none';
       document.getElementById('imagen4').style.display = 'block';
       document.getElementById('boton7').style.visibility='visible';
       document.getElementById('titulo4').style.display='block';
+      document.getElementById('comprar4').style.visibility='visible';
     }
   
   
@@ -75,11 +77,11 @@ function mostrar(){
     }
     
   function ocultar5(){
-      document.getElementById('comprar5').style.visibility='visible';
       document.getElementById('datos5').style.display ='none';
       document.getElementById('imagen5').style.display = 'block';
       document.getElementById('boton9').style.visibility='visible';
       document.getElementById('titulo5').style.display='block';
+      document.getElementById('comprar5').style.visibility='visible';
     }
   
     function mostrar6(){
@@ -92,11 +94,11 @@ function mostrar(){
     }
     
   function ocultar6(){
-      document.getElementById('comprar6').style.visibility='visible';
       document.getElementById('datos6').style.display ='none';
       document.getElementById('imagen6').style.display = 'block';
       document.getElementById('boton11').style.visibility='visible';
       document.getElementById('titulo6').style.display='block';
+      document.getElementById('comprar6').style.visibility='visible';
     }
   
     function mostrar7(){
@@ -109,11 +111,11 @@ function mostrar(){
     }
     
   function ocultar7(){
-      document.getElementById('comprar7').style.visibility='visible';
       document.getElementById('datos7').style.display ='none';
       document.getElementById('imagen7').style.display = 'block';
       document.getElementById('boton13').style.visibility='visible';
       document.getElementById('titulo7').style.display='block';
+      document.getElementById('comprar7').style.visibility='visible';
     }
     
     function mostrar8(){
@@ -126,11 +128,11 @@ function mostrar(){
     }
     
   function ocultar8(){
-      document.getElementById('comprar8').style.visibility='visible';
       document.getElementById('datos8').style.display ='none';
       document.getElementById('imagen8').style.display = 'block';
       document.getElementById('boton15').style.visibility='visible';
       document.getElementById('titulo8').style.display='block';
+      document.getElementById('comprar8').style.visibility='visible';
     }
     function mostrar9(){
       document.getElementById('comprar9').style.visibility='hidden';

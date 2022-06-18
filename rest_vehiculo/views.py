@@ -19,8 +19,8 @@ def lista_personas(request):
         serializer = PersonasSerializer(personas, many=True)
         return Response(serializer.data)
     elif request.method =='POST':
-        #data= JSONParser().parse(request)
-        serializer = PersonasSerializer(data=request.data)
+        data= JSONParser().parse(request)
+        serializer = PersonasSerializer(data=data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
